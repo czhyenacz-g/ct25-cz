@@ -49,23 +49,27 @@ const verificationSteps = [
 export default function Home() {
   return (
     <>
-      <section className="border-b border-line bg-gradient-to-b from-warn/10 to-transparent">
+      <section className="border-b border-warn/30 bg-gradient-to-b from-warn/15 to-transparent">
         <div className="mx-auto max-w-4xl px-4 py-14 text-center sm:py-20">
-          <p className="mb-3 inline-block rounded-full bg-warn/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-warn">
-            Informační upozornění
+          <p className="mb-4 inline-block rounded-full border border-warn/50 bg-warn/20 px-3 py-1 text-xs font-bold uppercase tracking-wide text-warn">
+            Informační varování
           </p>
-          <h1 className="text-3xl font-bold text-white sm:text-4xl">
-            Pozor na obsah šířený pod názvem ČT25
+          <h1 className="text-2xl font-extrabold uppercase leading-tight tracking-tight text-white sm:text-4xl">
+            Pozor: facebooková stránka ČT25 šíří prokazatelně nepravdivý a manipulativní obsah
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-gray-300 sm:text-lg">
             Označení „ČT25“ používá na sociálních sítích stránka „{CT25_PAGE_NAME}“. Nejde o Českou
-            televizi. Nezávislí ověřovatelé doložili u ní opakované zveřejňování zmanipulovaných
-            fotografií a obsahu vytvořeného umělou inteligencí, který lze snadno zaměnit za skutečnost.
+            televizi. Nezávislí fact-checkeři doložili, že tato stránka opakovaně zveřejnila
+            fotomontáže, nepravdivá tvrzení a obsah vytvořený umělou inteligencí, který byl vydáván
+            nebo mohl být zaměněn za skutečnost.
+          </p>
+          <p className="mx-auto mt-6 max-w-2xl text-xl font-bold text-warn sm:text-2xl">
+            ČT25 manipuluje. Ověřujte, než budete sdílet.
           </p>
           <div className="mx-auto mt-6 max-w-2xl rounded-lg border border-warn/40 bg-warn/10 p-4 text-sm text-gray-200 sm:text-base">
-            <strong className="text-white">Tento web není spojen s Českou televizí ani s provozovateli
-            stránky „{CT25_PAGE_NAME}“.</strong> Jeho cílem je upozorňovat na doložené informační
-            manipulace a pomáhat čtenářům ověřovat zdroje.
+            <strong className="text-white">CT25.cz není spojen s Českou televizí ani s provozovateli
+            facebookové stránky „{CT25_PAGE_NAME}“.</strong> Tento web před jejími doloženými
+            manipulacemi varuje.
           </div>
         </div>
       </section>
@@ -143,17 +147,40 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="text-2xl font-bold text-white">O projektu</h2>
-        <p className="mt-4 text-gray-300">
-          Tento web vznikl jako nezávislá reakce na opakované šíření zmanipulovaného obsahu pod
-          názvem připomínajícím Českou televizi. Nejde o zpravodajský portál ani o oficiální instituci
-          – je to jednoduchý informační projekt, jehož cílem je shromažďovat doložené případy a
-          usnadnit čtenářům ověřování zdrojů. Více na stránce{" "}
-          <Link href="/o-projektu" className="text-accent underline">
-            O projektu
+        <div className="rounded-lg border border-warn/40 bg-warn/10 p-6 text-center sm:p-8">
+          <h2 className="text-xl font-bold text-white sm:text-2xl">
+            Narazili jste na podezřelý příspěvek ČT25?
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-gray-300">
+            Pošlete nám odkaz nebo screenshot. Tvrzení prověříme podle veřejně dostupných zdrojů.
+            Pokud se manipulace potvrdí, můžeme před ní varovat další čtenáře.
+          </p>
+          <Link
+            href="/poslat-podnet"
+            className="mt-5 inline-block rounded-md bg-accent px-5 py-2.5 font-semibold text-ink hover:brightness-110"
+          >
+            Poslat podnět
           </Link>
-          .
-        </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <h2 className="text-2xl font-bold text-white">O projektu</h2>
+        <div className="mt-4 space-y-4 text-gray-300">
+          <p>
+            CT25.cz vznikl jako veřejné varování před opakovaně doloženými manipulacemi šířenými pod
+            názvem „{CT25_PAGE_NAME}“. Shromažďuje konkrétní případy, odkazuje na jejich nezávislé
+            ověření a pomáhá čtenářům rozpoznat nepravdivý nebo zmanipulovaný obsah.
+          </p>
+          <p>
+            Web nevydává každý nesouhlasný názor za dezinformaci. Zaměřuje se na konkrétní tvrzení,
+            fotografie a videa, která lze ověřit pomocí veřejných zdrojů. Více na stránce{" "}
+            <Link href="/o-projektu" className="text-accent underline">
+              O projektu
+            </Link>
+            .
+          </p>
+        </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">

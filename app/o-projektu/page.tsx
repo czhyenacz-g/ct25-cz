@@ -15,10 +15,13 @@ export default function AboutPage() {
 
       <div className="mt-6 space-y-5 text-gray-300">
         <p>
-          {SITE_NAME} je nezávislý informační web upozorňující na to, že označení „ČT25“ na
-          sociálních sítích používá facebooková stránka „{CT25_PAGE_NAME}“, u které nezávislí
-          ověřovatelé opakovaně doložili šíření zmanipulovaných fotografií, fotomontáží a obsahu
-          vytvořeného umělou inteligencí.
+          {SITE_NAME} vznikl jako veřejné varování před opakovaně doloženými manipulacemi šířenými
+          pod názvem „{CT25_PAGE_NAME}“. Shromažďuje konkrétní případy, odkazuje na jejich nezávislé
+          ověření a pomáhá čtenářům rozpoznat nepravdivý nebo zmanipulovaný obsah.
+        </p>
+        <p>
+          Web nevydává každý nesouhlasný názor za dezinformaci. Zaměřuje se na konkrétní tvrzení,
+          fotografie a videa, která lze ověřit pomocí veřejných zdrojů.
         </p>
         <p>
           <strong className="text-white">

@@ -1,10 +1,11 @@
 export const SITE_NAME = "CT25.cz";
-export const SITE_TITLE = "Pozor na obsah šířený pod názvem ČT25";
+export const SITE_TAGLINE = "Varování před dezinformacemi";
+export const SITE_TITLE = "Varování před dezinformacemi a manipulacemi ČT25";
 export const SITE_DOMAIN = "ct25.cz";
 export const SITE_URL = `https://${SITE_DOMAIN}`;
 
 export const SITE_DESCRIPTION =
-  "Facebooková stránka „ČT25 – Pravda bez cenzury“ nemá nic společného s Českou televizí. Nezávislí ověřovatelé u ní doložili opakované šíření zmanipulovaných fotografií a obsahu vytvořeného umělou inteligencí. Přehled doložených případů a návod, jak manipulaci poznat.";
+  "Doložené případy nepravdivých tvrzení, fotomontáží a AI obsahu šířeného facebookovou stránkou „ČT25 – Pravda bez cenzury“. CT25.cz před touto stránkou varuje a nemá s ní ani s Českou televizí nic společného.";
 
 export const CT25_PAGE_NAME = "ČT25 – Pravda bez cenzury";
 
@@ -21,12 +22,14 @@ export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "";
 export const NAV_LINKS = [
   { href: "/#pripady", label: "Doložené případy" },
   { href: "/#jak-poznat", label: "Jak poznat manipulaci" },
+  { href: "/poslat-podnet", label: "Poslat podnět" },
   { href: "/o-projektu", label: "O projektu" },
   { href: "/kontakt", label: "Kontakt" },
 ] as const;
 
 export const FOOTER_LEGAL_LINKS = [
   { href: "/o-projektu", label: "O projektu" },
+  { href: "/poslat-podnet", label: "Poslat podnět" },
   { href: "/redakcni-pravidla", label: "Redakční pravidla" },
   { href: "/pravni-upozorneni", label: "Právní upozornění" },
   { href: "/ochrana-soukromi", label: "Ochrana soukromí" },

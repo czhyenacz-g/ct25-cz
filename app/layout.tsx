@@ -7,16 +7,18 @@ import AnalyticsScripts from "./components/consent/AnalyticsScripts";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+const FULL_TITLE = `${SITE_NAME} – ${SITE_TITLE}`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_TITLE} | ${SITE_NAME}`,
+    default: FULL_TITLE,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
   alternates: { canonical: "/" },
   openGraph: {
-    title: `${SITE_TITLE} | ${SITE_NAME}`,
+    title: FULL_TITLE,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     siteName: SITE_NAME,
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_TITLE} | ${SITE_NAME}`,
+    title: FULL_TITLE,
     description: SITE_DESCRIPTION,
   },
   robots: {

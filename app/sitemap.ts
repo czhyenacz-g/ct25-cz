@@ -4,6 +4,7 @@ import { SITE_URL } from "./config/site";
 const routes = [
   "",
   "/o-projektu",
+  "/poslat-podnet",
   "/kontakt",
   "/ochrana-soukromi",
   "/cookies",
