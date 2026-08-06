@@ -86,7 +86,7 @@ export default function Home() {
           zmanipulovaný nebo zavádějící obsah šířila stránka „{CT25_PAGE_NAME}“. Přibývat budou další
           doložené případy.
         </p>
-        <div className="mt-6 grid gap-5 sm:grid-cols-2">
+        <div className="mt-6 grid items-start gap-5 sm:grid-cols-2">
           {documentedCases.map((item) => (
             <CaseCard key={item.slug} item={item} />
           ))}

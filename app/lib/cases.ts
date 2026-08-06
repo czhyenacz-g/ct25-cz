@@ -4,6 +4,15 @@ export interface CaseSource {
   url: string;
 }
 
+export interface CaseImage {
+  /** Cesta v public/, obrázek je verzovaný přímo v repozitáři. */
+  src: string;
+  alt: string;
+  caption: string;
+  width: number;
+  height: number;
+}
+
 export interface DocumentedCase {
   slug: string;
   title: string;
@@ -12,6 +21,8 @@ export interface DocumentedCase {
   /** Datum, kdy nezávislý ověřovatel případ zveřejnil/ověřil (ISO 8601). */
   verifiedDate: string;
   sources: CaseSource[];
+  /** Volitelný ilustrační obrázek zobrazený nad textem případu. */
+  image?: CaseImage;
 }
 
 /**
@@ -60,6 +71,13 @@ export const documentedCases: DocumentedCase[] = [
         url: "https://cedmohub.eu/cs/pavel-si-podal-ruku-s-britskym-dustojnikem-fotomontaz-z-nej-udelala-putina/",
       },
     ],
+    image: {
+      src: "/images/cases/pavel-putin/parody-collage.webp",
+      alt: "Srovnání originální fotografie Petra Pavla s britským důstojníkem z roku 1995, upraveného podvrhu s domontovaným Vladimirem Putinem šířeného stránkou ČT25 a pěti dalších humorných parodických verzí téže fotomontáže",
+      caption: "Původní podvrh a ukázky dalších parodických variant.",
+      width: 1535,
+      height: 1024,
+    },
   },
   {
     slug: "petr-pavel-obusek-fotomontaz",

@@ -1,4 +1,5 @@
 import { DocumentedCase } from "../lib/cases";
+import ImageWithLightbox from "./ImageWithLightbox";
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString("cs-CZ", { year: "numeric", month: "long", day: "numeric" });
@@ -11,6 +12,17 @@ export default function CaseCard({ item }: { item: DocumentedCase }) {
         {item.manipulationType}
       </span>
       <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+      {item.image && (
+        <div className="mt-3">
+          <ImageWithLightbox
+            src={item.image.src}
+            alt={item.image.alt}
+            caption={item.image.caption}
+            width={item.image.width}
+            height={item.image.height}
+          />
+        </div>
+      )}
       <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-300">{item.summary}</p>
       <p className="mt-3 text-xs text-gray-500">Ověřeno: {formatDate(item.verifiedDate)}</p>
       <ul className="mt-2 space-y-1">
