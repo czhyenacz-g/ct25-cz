@@ -9,10 +9,3 @@ html {
 body {
   font-feature-settings: "kern";
 }
-
-.skip-link:focus {
-  clip: auto;
-  width: auto;
-  height: auto;
-  overflow: visible;
-}

@@ -45,7 +45,7 @@ export default function RootLayout({
       <body className="flex min-h-screen flex-col bg-ink text-white antialiased">
         <a
           href="#hlavni-obsah"
-          className="skip-link absolute left-2 top-2 z-50 h-0 w-0 overflow-hidden rounded bg-accent px-3 py-2 text-sm font-medium text-ink"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-accent focus:px-3 focus:py-2 focus:text-sm focus:font-medium focus:text-ink"
         >
           Přejít na hlavní obsah
         </a>
