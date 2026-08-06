@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { CONTACT_EMAIL, SITE_NAME } from "../config/site";
+import { CONTACT_EMAIL, CONTACT_EMAIL_DOMAIN, CONTACT_EMAIL_USER, SITE_NAME } from "../config/site";
+import ObfuscatedEmail from "../components/ObfuscatedEmail";
 
 export const metadata: Metadata = {
   title: "Kontakt",
@@ -22,10 +23,7 @@ export default function ContactPage() {
 
         {CONTACT_EMAIL ? (
           <p>
-            E-mail:{" "}
-            <a href={`mailto:${CONTACT_EMAIL}`} className="text-accent underline">
-              {CONTACT_EMAIL}
-            </a>
+            E-mail: <ObfuscatedEmail user={CONTACT_EMAIL_USER} domain={CONTACT_EMAIL_DOMAIN} />
           </p>
         ) : isDev ? (
           <p className="rounded-md border border-dashed border-line bg-surface p-4 text-sm text-gray-400">

@@ -19,6 +19,13 @@ export const LAST_CONTENT_UPDATE = "2026-08-06";
 // /kontakt nezobrazí žádnou (ani placeholder) adresu — viz docs/LEGAL-TODO.md.
 export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "";
 
+// Rozdělené na dvě části pro ObfuscatedEmail — kvůli ochraně před
+// scrapery/boty se adresa nikdy nevykresluje jako jeden spojený řetězec
+// v serverem generovaném HTML (viz app/components/ObfuscatedEmail.tsx).
+const [CONTACT_EMAIL_USER_PART, CONTACT_EMAIL_DOMAIN_PART] = CONTACT_EMAIL.split("@");
+export const CONTACT_EMAIL_USER = CONTACT_EMAIL_USER_PART || "";
+export const CONTACT_EMAIL_DOMAIN = CONTACT_EMAIL_DOMAIN_PART || "";
+
 export const NAV_LINKS = [
   { href: "/#pripady", label: "Doložené případy" },
   { href: "/#jak-poznat", label: "Jak poznat manipulaci" },

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CONTACT_EMAIL, CT25_PAGE_NAME } from "../config/site";
+import { CONTACT_EMAIL, CONTACT_EMAIL_DOMAIN, CONTACT_EMAIL_USER, CT25_PAGE_NAME } from "../config/site";
+import ObfuscatedEmail from "../components/ObfuscatedEmail";
 
 export const metadata: Metadata = {
   title: "Poslat podnět",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ReportTipPage() {
   const isDev = process.env.NODE_ENV !== "production";
-  const subject = encodeURIComponent("Podnět k prověření – ČT25");
+  const subject = "Podnět k prověření – ČT25";
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-12">
@@ -34,9 +35,7 @@ export default function ReportTipPage() {
       {CONTACT_EMAIL ? (
         <p className="mt-3">
           Napište nám na{" "}
-          <a href={`mailto:${CONTACT_EMAIL}?subject=${subject}`} className="text-accent underline">
-            {CONTACT_EMAIL}
-          </a>{" "}
+          <ObfuscatedEmail user={CONTACT_EMAIL_USER} domain={CONTACT_EMAIL_DOMAIN} subject={subject} />{" "}
           a přiložte odkaz nebo screenshot a informace uvedené výše.
         </p>
       ) : isDev ? (
