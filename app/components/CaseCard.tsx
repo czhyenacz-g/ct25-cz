@@ -1,5 +1,7 @@
 import { DocumentedCase } from "../lib/cases";
+import { SITE_URL } from "../config/site";
 import ImageWithLightbox from "./ImageWithLightbox";
+import ShareCaseLink from "./ShareCaseLink";
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString("cs-CZ", { year: "numeric", month: "long", day: "numeric" });
@@ -7,7 +9,10 @@ function formatDate(iso: string) {
 
 export default function CaseCard({ item }: { item: DocumentedCase }) {
   return (
-    <article className="flex h-full flex-col rounded-lg border border-line bg-surface p-5">
+    <article
+      id={item.slug}
+      className="flex h-full scroll-mt-24 flex-col rounded-lg border border-line bg-surface p-5 transition-shadow"
+    >
       <span className="mb-2 inline-block w-fit rounded bg-warn/20 px-2 py-1 text-xs font-medium text-warn">
         {item.manipulationType}
       </span>
@@ -39,6 +44,9 @@ export default function CaseCard({ item }: { item: DocumentedCase }) {
           </li>
         ))}
       </ul>
+      <div className="mt-3 border-t border-line/60 pt-3">
+        <ShareCaseLink slug={item.slug} absoluteUrl={`${SITE_URL}/clanky/${item.slug}`} />
+      </div>
     </article>
   );
 }

@@ -117,3 +117,18 @@ export const documentedCases: DocumentedCase[] = [
     ],
   },
 ];
+
+// Tvrdá kontrola unikátnosti slugů při načtení modulu — duplicitní slug má
+// selhat hned (build/dev i produkce), ne tiše přepsat dřívější případ ve
+// vyhledávání podle slugu (getCaseBySlug) nebo v sitemapě/route /clanky/[slug].
+const seenSlugs = new Set<string>();
+for (const item of documentedCases) {
+  if (seenSlugs.has(item.slug)) {
+    throw new Error(`Duplicitní slug případu: "${item.slug}". Slugy v documentedCases musí být unikátní.`);
+  }
+  seenSlugs.add(item.slug);
+}
+
+export function getCaseBySlug(slug: string): DocumentedCase | undefined {
+  return documentedCases.find((item) => item.slug === slug);
+}

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { documentedCases } from "../app/lib/cases";
+import { documentedCases, getCaseBySlug } from "../app/lib/cases";
 
 describe("documentedCases", () => {
   it("obsahuje alespoň jeden případ", () => {
@@ -25,5 +25,16 @@ describe("documentedCases", () => {
     for (const item of documentedCases) {
       expect(item.verifiedDate).toMatch(/^\d{4}-\d{2}-\d{2}$/);
     }
+  });
+});
+
+describe("getCaseBySlug", () => {
+  it("najde existující případ podle slugu", () => {
+    const existing = documentedCases[0];
+    expect(getCaseBySlug(existing.slug)).toBe(existing);
+  });
+
+  it("vrátí undefined pro neexistující slug", () => {
+    expect(getCaseBySlug("tento-slug-urcite-neexistuje")).toBeUndefined();
   });
 });
