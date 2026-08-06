@@ -33,26 +33,6 @@ export interface DocumentedCase {
  */
 export const documentedCases: DocumentedCase[] = [
   {
-    slug: "zhar-pardubice-minar-halik",
-    title: "Fotomontáž spojující žháře z Pardubic s Minářem a Halíkem",
-    summary:
-      "Stránka „ČT25 – Pravda bez cenzury“ zveřejnila fotografii, na které měli být vedle sebe teolog Tomáš Halík, předseda Milionu chvilek Mikuláš Minář a muž obviněný ze žhářského útoku na zbrojařskou firmu v Pardubicích, s poznámkou, že jde o „ilustrační foto“. Podle Demagog.cz vznikl snímek úpravou skutečné fotografie Halíka a Mináře pomocí umělé inteligence – manipulaci odhalil bílý náramek hodinek, který se shodně objevuje na originální fotografii z policejního transportu obviněného i na upravené verzi. Facebook fotografii následně v rámci spolupráce s fact-checkery označil jako pozměněnou.",
-    manipulationType: "Zmanipulovaná fotografie vytvořená pomocí AI",
-    verifiedDate: "2026-03-27",
-    sources: [
-      {
-        label: "Falešná fotografie spojuje žháře z Pardubic s Minářem a Halíkem",
-        publisher: "Demagog.cz",
-        url: "https://demagog.cz/diskuze/falesna-fotografie-spojuje-zhare-z-pardubic-s-minarem-a-halikem",
-      },
-      {
-        label: "Falešná fotografie spojuje žháře z Pardubic s Minářem a Halíkem",
-        publisher: "CEDMO",
-        url: "https://cedmohub.eu/cs/falesna-fotografie-spojuje-zhare-z-pardubic-s-minarem-a-halikem/",
-      },
-    ],
-  },
-  {
     slug: "petr-pavel-putin-fotomontaz",
     title: "Fotomontáž „setkání“ Petra Pavla s Vladimirem Putinem",
     summary:
@@ -78,6 +58,26 @@ export const documentedCases: DocumentedCase[] = [
       width: 1535,
       height: 1024,
     },
+  },
+  {
+    slug: "zhar-pardubice-minar-halik",
+    title: "Fotomontáž spojující žháře z Pardubic s Minářem a Halíkem",
+    summary:
+      "Stránka „ČT25 – Pravda bez cenzury“ zveřejnila fotografii, na které měli být vedle sebe teolog Tomáš Halík, předseda Milionu chvilek Mikuláš Minář a muž obviněný ze žhářského útoku na zbrojařskou firmu v Pardubicích, s poznámkou, že jde o „ilustrační foto“. Podle Demagog.cz vznikl snímek úpravou skutečné fotografie Halíka a Mináře pomocí umělé inteligence – manipulaci odhalil bílý náramek hodinek, který se shodně objevuje na originální fotografii z policejního transportu obviněného i na upravené verzi. Facebook fotografii následně v rámci spolupráce s fact-checkery označil jako pozměněnou.",
+    manipulationType: "Zmanipulovaná fotografie vytvořená pomocí AI",
+    verifiedDate: "2026-03-27",
+    sources: [
+      {
+        label: "Falešná fotografie spojuje žháře z Pardubic s Minářem a Halíkem",
+        publisher: "Demagog.cz",
+        url: "https://demagog.cz/diskuze/falesna-fotografie-spojuje-zhare-z-pardubic-s-minarem-a-halikem",
+      },
+      {
+        label: "Falešná fotografie spojuje žháře z Pardubic s Minářem a Halíkem",
+        publisher: "CEDMO",
+        url: "https://cedmohub.eu/cs/falesna-fotografie-spojuje-zhare-z-pardubic-s-minarem-a-halikem/",
+      },
+    ],
   },
   {
     slug: "petr-pavel-obusek-fotomontaz",
