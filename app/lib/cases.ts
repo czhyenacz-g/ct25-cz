@@ -78,6 +78,13 @@ export const documentedCases: DocumentedCase[] = [
         url: "https://cedmohub.eu/cs/falesna-fotografie-spojuje-zhare-z-pardubic-s-minarem-a-halikem/",
       },
     ],
+    image: {
+      src: "/images/cases/zhar-pardubice/parody-collage.webp",
+      alt: "Srovnání přeškrtnuté původní fotografie tří mužů s upravenou AI fotomontáží, ve které je prostřední muž nahrazen postavou čerta s trojzubcem; obrázek je otevřeně označen jako satira a fikce vytvořená pomocí AI",
+      caption: "Satirická AI úprava vytvořená jako vtipná reakce – nejde o skutečnou událost ani o původní podvrh ČT25.",
+      width: 1536,
+      height: 1024,
+    },
   },
   {
     slug: "petr-pavel-obusek-fotomontaz",
