@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Bash(gh *)",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "Bash(node *)",
+      "Bash(vercel *)",
+      "Bash(mkdir *)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(rm *)",
+      "Bash(python3 *)",
+      "Bash(touch *)",
+      "Bash(ls *)",
+      "Bash(find *)",
+      "Bash(grep *)",
+      "Bash(cat *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(sed *)",
+      "Bash(awk *)",
+      "Bash(wc *)",
+      "Bash(sort *)",
+      "Bash(echo *)",
+      "Bash(printf *)",
+      "Bash(source *)",
+      "Bash(curl *)",
+      "Bash(chmod *)",
+      "Bash(which *)",
+      "WebFetch(domain:localhost)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:api.vercel.com)",
+      "WebFetch(domain:vercel.com)",
+      "WebFetch(domain:demagog.cz)",
+      "WebFetch(domain:cedmohub.eu)"
+    ],
+    "deny": []
+  }
+}

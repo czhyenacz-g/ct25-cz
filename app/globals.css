@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: "kern";
+}
+
+.skip-link:focus {
+  clip: auto;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
