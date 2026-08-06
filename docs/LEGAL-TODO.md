@@ -19,6 +19,9 @@
   (`app/redakcni-pravidla/page.tsx`, `docs/SOURCES.md`).
 - Kontaktní stránka, která na produkci nevymýšlí neexistující kontakt,
   pokud `NEXT_PUBLIC_CONTACT_EMAIL` není nastaven (`app/kontakt/page.tsx`).
+- Kontaktní e-mail nastaven na `redakce@sokujiciodhaleni.cz` – sdílená
+  redakční adresa se sesterským projektem ŠokujícíOdhalení.cz, ne osobní
+  e-mail konkrétní fyzické osoby (`NEXT_PUBLIC_CONTACT_EMAIL`).
 
 ## Závisí na identitě provozovatele
 
@@ -26,7 +29,6 @@
   vědomě neuvedeno, viz zadání projektu. Musí být doplněno **před plným
   komerčním spuštěním** a před nasazením jakékoli reklamy.
 - IČO / DIČ, pokud provozovatel podniká.
-- Skutečný kontaktní e-mail (`NEXT_PUBLIC_CONTACT_EMAIL`).
 - Přesná právní forma zveřejnění (impressum) odpovídající skutečnému
   provozovateli – aktuální texty jsou vědomě formulovány jako dočasné.
 

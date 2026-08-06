@@ -38,7 +38,7 @@ Zkopíruj `.env.example` do `.env.local` a vyplň dle potřeby:
 
 | Proměnná | Účel | Výchozí stav |
 |---|---|---|
-| `NEXT_PUBLIC_CONTACT_EMAIL` | Kontaktní e-mail na stránce `/kontakt` | Bez hodnoty se na produkci nezobrazí žádný kontakt |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | Kontaktní e-mail na `/kontakt` a `/poslat-podnet` | Nastaveno na `redakce@sokujiciodhaleni.cz` (sdíleno se ŠokujícíOdhalení.cz); bez hodnoty se na produkci nezobrazí žádný kontakt |
 | `NEXT_PUBLIC_GOATCOUNTER_CODE` | Subdoména GoatCounter | Bez hodnoty se analytika nenačítá |
 | `NEXT_PUBLIC_ADSENSE_CLIENT_ID` | Google AdSense client ID (propojení účtu) | Bez hodnoty se AdSense account script nenačítá vůbec |
 | `NEXT_PUBLIC_ADSENSE_ADS_ENABLED` | Zapíná skutečné reklamní jednotky v `AdSlot` | `false`/chybí → `AdSlot` nevykresluje žádnou jednotku |
