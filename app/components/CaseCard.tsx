@@ -20,7 +20,7 @@ export default function CaseCard({ item }: { item: DocumentedCase }) {
               href={source.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent underline hover:brightness-110"
+              className="inline-block py-1 text-accent underline hover:brightness-110"
             >
               {source.publisher}: {source.label}
             </a>

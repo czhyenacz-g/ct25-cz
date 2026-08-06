@@ -58,10 +58,9 @@ export default function Home() {
             Pozor: facebooková stránka ČT25 šíří prokazatelně nepravdivý a manipulativní obsah
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-gray-300 sm:text-lg">
-            Označení „ČT25“ používá na sociálních sítích stránka „{CT25_PAGE_NAME}“. Nejde o Českou
-            televizi. Nezávislí fact-checkeři doložili, že tato stránka opakovaně zveřejnila
-            fotomontáže, nepravdivá tvrzení a obsah vytvořený umělou inteligencí, který byl vydáván
-            nebo mohl být zaměněn za skutečnost.
+            Označení „ČT25“ používá na sociálních sítích stránka „{CT25_PAGE_NAME}“ – nejde o Českou
+            televizi. Nezávislí fact-checkeři u ní doložili opakované šíření fotomontáží, nepravdivých
+            tvrzení a AI obsahu, který lze zaměnit za skutečnost.
           </p>
           <p className="mx-auto mt-6 max-w-2xl text-xl font-bold text-warn sm:text-2xl">
             ČT25 manipuluje. Ověřujte, než budete sdílet.
@@ -71,31 +70,12 @@ export default function Home() {
             facebookové stránky „{CT25_PAGE_NAME}“.</strong> Tento web před jejími doloženými
             manipulacemi varuje.
           </div>
-        </div>
-      </section>
-
-      <div className="mx-auto max-w-5xl px-4 py-6">
-        <AdSlot placement="after-hero" format="leaderboard" />
-      </div>
-
-      <section className="mx-auto max-w-4xl px-4 py-10">
-        <h2 className="text-2xl font-bold text-white">Co je „ČT25“</h2>
-        <div className="mt-4 space-y-4 text-gray-300">
-          <p>
-            „ČT25“ není program ani služba České televize. Je to název facebookové stránky
-            „{CT25_PAGE_NAME}“, kterou provozuje blíže neznámý subjekt využívající zkratku
-            připomínající veřejnoprávní televizi.
-          </p>
-          <p>
-            Česká televize provozuje své vlastní, veřejně ověřitelné kanály a stránky. Stránka
-            „{CT25_PAGE_NAME}“ s ní nemá žádné organizační ani obsahové spojení.
-          </p>
-          <p>
-            Problém, na který tento web upozorňuje, není politický názor stránky, ale doložené
-            používání zmanipulovaných fotografií, fotomontáží a obsahu vytvořeného umělou inteligencí,
-            který může čtenáře uvést v omyl. Konkrétní případy níže vždy odkazují na veřejně dostupný
-            fact-check nezávislého ověřovatele.
-          </p>
+          <a
+            href="#pripady"
+            className="mt-8 inline-block rounded-md bg-accent px-6 py-3 font-semibold text-ink hover:brightness-110"
+          >
+            Zobrazit doložené případy
+          </a>
         </div>
       </section>
 
@@ -114,8 +94,38 @@ export default function Home() {
       </section>
 
       <div className="mx-auto max-w-5xl px-4 py-6">
-        <AdSlot placement="mid-content" format="rectangle" />
+        <AdSlot placement="after-hero" format="leaderboard" />
       </div>
+
+      <section className="mx-auto max-w-4xl px-4 py-10">
+        <details className="group rounded-lg border border-line bg-surface">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5 [&::-webkit-details-marker]:hidden">
+            <h2 className="text-lg font-bold text-white sm:text-xl">
+              Co je ČT25 a proč před ní tento web varuje?
+            </h2>
+            <span aria-hidden="true" className="shrink-0 text-2xl leading-none text-gray-400 transition-transform group-open:rotate-45">
+              +
+            </span>
+          </summary>
+          <div className="space-y-4 px-5 pb-5 text-gray-300">
+            <p>
+              „ČT25“ není program ani služba České televize. Je to název facebookové stránky
+              „{CT25_PAGE_NAME}“, kterou provozuje blíže neznámý subjekt využívající zkratku
+              připomínající veřejnoprávní televizi.
+            </p>
+            <p>
+              Česká televize provozuje své vlastní, veřejně ověřitelné kanály a stránky. Stránka
+              „{CT25_PAGE_NAME}“ s ní nemá žádné organizační ani obsahové spojení.
+            </p>
+            <p>
+              Problém, na který tento web upozorňuje, není politický názor stránky, ale doložené
+              používání zmanipulovaných fotografií, fotomontáží a obsahu vytvořeného umělou
+              inteligencí, který může čtenáře uvést v omyl. Konkrétní případy výše vždy odkazují na
+              veřejně dostupný fact-check nezávislého ověřovatele.
+            </p>
+          </div>
+        </details>
+      </section>
 
       <section id="jak-poznat" className="mx-auto max-w-4xl px-4 py-10">
         <h2 className="text-2xl font-bold text-white">Jak manipulaci poznat</h2>
@@ -128,6 +138,10 @@ export default function Home() {
           ))}
         </ul>
       </section>
+
+      <div className="mx-auto max-w-5xl px-4 py-6">
+        <AdSlot placement="mid-content" format="rectangle" />
+      </div>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
         <h2 className="text-2xl font-bold text-white">Jak postupovat před sdílením</h2>
