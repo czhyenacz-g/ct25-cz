@@ -8,8 +8,11 @@
   `app/components/consent/`).
 - Analytické skripty (Vercel Analytics, GoatCounter) se nenačtou bez
   souhlasu (`app/components/consent/AnalyticsScripts.tsx`).
-- Reklamní sloty připravené, ale bez nasazené reklamní sítě
-  (`app/components/ads/AdSlot.tsx`).
+- Reklamní sloty připravené, ale bez skutečných reklamních jednotek
+  (`app/components/ads/AdSlot.tsx`, `ADS_ENABLED`).
+- Google AdSense propojen jen na úrovni ověřovacího account scriptu
+  (`app/components/ads/AdSenseAccountScript.tsx`), načítá se pouze po
+  souhlasu s marketingovými cookies (`app/components/consent/MarketingScripts.tsx`).
 - Právní upozornění jasně odlišující web od České televize i od stránky
   „ČT25 – Pravda bez cenzury“ (`app/pravni-upozorneni/page.tsx`).
 - Redakční pravidla vyžadující zdroj u každého tvrzení
@@ -29,10 +32,13 @@
 
 ## Před nasazením reklamy
 
-- Doplnit `NEXT_PUBLIC_ADSENSE_CLIENT_ID` (nebo jiného poskytovatele) a
-  rozšířit `AdSlot.tsx` o skutečné vykreslení jednotky.
+- Účet Google AdSense je propojen (`NEXT_PUBLIC_ADSENSE_CLIENT_ID`), ale
+  na webu se ještě nezobrazuje žádná konkrétní reklamní jednotka.
+- Až budou existovat schválené reklamní jednotky/slot ID, doplnit
+  `NEXT_PUBLIC_ADSENSE_ADS_ENABLED=true` a rozšířit `AdSlot.tsx` o skutečné
+  vykreslení jednotky (podmíněné souhlasem s marketingovými cookies).
 - Aktualizovat `app/cookies/page.tsx` a `app/ochrana-soukromi/page.tsx`,
-  aby popisovaly konkrétní nasazenou reklamní síť.
+  aby popisovaly konkrétní zobrazené reklamní jednotky.
 - Ověřit, že marketingové skripty se načítají výhradně po souhlasu se
   marketingovou kategorií cookies.
 - Zvážit nutnost registrace provozovatele reklamy podle daňových předpisů.

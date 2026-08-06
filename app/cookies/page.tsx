@@ -24,7 +24,7 @@ const categories = [
     title: "Marketingové",
     status: "Výchozí: vypnuto",
     description:
-      "Zatím web nenačítá žádnou reklamní síť. Kategorie je připravena pro budoucí použití (např. Google AdSense) – i tehdy se skripty načtou až po souhlasu.",
+      "Po souhlasu se načte ověřovací account script Google AdSense (jen propojení účtu, bez zobrazování reklamních jednotek). Bez souhlasu se nenačítá vůbec.",
   },
 ];
 

@@ -4,6 +4,7 @@ import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "./config/site
 import { ConsentProvider } from "./components/consent/ConsentProvider";
 import CookieConsentUI from "./components/consent/CookieConsentUI";
 import AnalyticsScripts from "./components/consent/AnalyticsScripts";
+import MarketingScripts from "./components/consent/MarketingScripts";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -56,6 +57,7 @@ export default function RootLayout({
           <Footer />
           <CookieConsentUI />
           <AnalyticsScripts />
+          <MarketingScripts />
         </ConsentProvider>
       </body>
     </html>

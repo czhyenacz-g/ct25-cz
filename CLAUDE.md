@@ -71,6 +71,9 @@ Omezení, která platí vždy:
 - **Next.js 15** (App Router), **React 19**, **TypeScript**, **Tailwind CSS**
 - **Vercel Analytics** + **GoatCounter** – obojí se načte jen po souhlasu s
   analytickými cookies (`app/components/consent/AnalyticsScripts.tsx`)
+- **Google AdSense** (jen propojení účtu, žádné reklamní jednotky) – account
+  script se načte jen po souhlasu s marketingovými cookies
+  (`app/components/consent/MarketingScripts.tsx`)
 - Deploy: **Vercel** (auto-deploy z GitHubu na push do `main`)
 
 ## Struktura projektu
@@ -90,9 +93,9 @@ app/
     consent.ts                 # Typy a helpery pro cookie souhlas
   components/
     Header.tsx, Footer.tsx, CaseCard.tsx
-    ads/AdSlot.tsx, ads/types.ts
+    ads/AdSlot.tsx, ads/types.ts, ads/AdSenseAccountScript.tsx
     consent/ConsentProvider.tsx, CookieConsentUI.tsx,
-      CookieSettingsButton.tsx, AnalyticsScripts.tsx
+      CookieSettingsButton.tsx, AnalyticsScripts.tsx, MarketingScripts.tsx
   api/og/route.tsx            # Dynamický OG image endpoint
 tests/                        # vitest – integrita dat případů a consent logiky
 docs/

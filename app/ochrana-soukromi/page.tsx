@@ -50,9 +50,10 @@ export default function PrivacyPage() {
 
         <h2 className="text-xl font-semibold text-white">Reklama</h2>
         <p>
-          Web má připravené reklamní prostory, ale v této fázi v nich nenačítá žádnou reklamní síť.
-          Pokud v budoucnu přibude konkrétní reklamní poskytovatel (např. Google AdSense), tento text i
-          nastavení cookies aktualizujeme a marketingové skripty se budou načítat pouze po souhlasu.
+          Web má propojený účet Google AdSense. Po souhlasu s marketingovými cookies se načte pouze
+          jeho ověřovací account script (potvrzení vlastnictví domény) – v žádném reklamním prostoru na
+          webu se ale zatím nezobrazuje žádná konkrétní reklamní jednotka. Bez souhlasu se tento skript
+          nenačítá. Jakmile přibudou skutečné reklamní jednotky, tento text aktualizujeme.
         </p>
 
         <h2 className="text-xl font-semibold text-white">Vaše práva</h2>

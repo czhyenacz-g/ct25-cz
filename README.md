@@ -40,7 +40,8 @@ Zkopíruj `.env.example` do `.env.local` a vyplň dle potřeby:
 |---|---|---|
 | `NEXT_PUBLIC_CONTACT_EMAIL` | Kontaktní e-mail na stránce `/kontakt` | Bez hodnoty se na produkci nezobrazí žádný kontakt |
 | `NEXT_PUBLIC_GOATCOUNTER_CODE` | Subdoména GoatCounter | Bez hodnoty se analytika nenačítá |
-| `NEXT_PUBLIC_ADSENSE_CLIENT_ID` | Budoucí ID reklamního poskytovatele | Bez hodnoty `AdSlot` v produkci nevykresluje nic |
+| `NEXT_PUBLIC_ADSENSE_CLIENT_ID` | Google AdSense client ID (propojení účtu) | Bez hodnoty se AdSense account script nenačítá vůbec |
+| `NEXT_PUBLIC_ADSENSE_ADS_ENABLED` | Zapíná skutečné reklamní jednotky v `AdSlot` | `false`/chybí → `AdSlot` nevykresluje žádnou jednotku |
 
 Žádná z těchto proměnných se nenačítá bez patřičného souhlasu s cookies –
 viz níže.
@@ -72,12 +73,18 @@ Produkční build: `npm run build` → `npm run start`, nebo přímo přes Verce
 
 Reklamní prostory řeší jediná komponenta `app/components/ads/AdSlot.tsx`:
 
-- Dokud není nastavena `NEXT_PUBLIC_ADSENSE_CLIENT_ID`, na produkci
+- Dokud `NEXT_PUBLIC_ADSENSE_ADS_ENABLED` není `"true"`, na produkci
   nevykresluje nic (jen ve vývoji ukáže placeholder se stabilními rozměry).
-- Po nastavení reklamního poskytovatele se v komponentě doplní vykreslení
-  skutečné, souhlasem podmíněné reklamní jednotky.
+- Po zapnutí a doplnění konkrétních slot ID se v komponentě doplní
+  vykreslení skutečné, souhlasem podmíněné reklamní jednotky.
 - Sloty jsou umístěné po hero sekci, mezi obsahovými sekcemi a před
   patičkou (`app/page.tsx`).
+
+Nezávisle na tom je propojený Google AdSense účet
+(`NEXT_PUBLIC_ADSENSE_CLIENT_ID`) – jeho ověřovací account script
+(`app/components/ads/AdSenseAccountScript.tsx`) se načte jen po souhlasu s
+marketingovými cookies (`app/components/consent/MarketingScripts.tsx`) a
+sám o sobě nezobrazuje žádnou reklamu.
 
 ## Správa cookies a souhlasu
 
@@ -86,6 +93,8 @@ Reklamní prostory řeší jediná komponenta `app/components/ads/AdSlot.tsx`:
 - UI banneru a nastavení: `app/components/consent/CookieConsentUI.tsx`.
 - Analytické skripty (Vercel Analytics, GoatCounter) se načtou výhradně
   přes `app/components/consent/AnalyticsScripts.tsx` až po souhlasu.
+- Marketingové skripty (AdSense account script) se načtou výhradně přes
+  `app/components/consent/MarketingScripts.tsx` až po souhlasu.
 - Uživatel může volbu kdykoli změnit odkazem „Nastavení cookies“ v patičce.
 
 ## Právní TODO před komerčním spuštěním

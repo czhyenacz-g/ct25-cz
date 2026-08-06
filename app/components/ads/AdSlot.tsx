@@ -3,9 +3,10 @@ import { AD_DIMENSIONS, AdFormat, AdPlacement } from "./types";
 
 /**
  * Jediné místo, které rozhoduje, co se v daném reklamním prostoru vykreslí.
- * Dokud nebude nakonfigurovaný reklamní poskytovatel (ADSENSE_CLIENT_ID),
- * v produkci se nevykresluje vůbec nic — ve vývoji se ukáže placeholder se
- * stabilními rozměry, aby bylo vidět rozvržení bez layout shiftu.
+ * Dokud nebude ADS_ENABLED (skutečné slot ID pro konkrétní pozice), v
+ * produkci se nevykresluje vůbec nic — ve vývoji se ukáže placeholder se
+ * stabilními rozměry, aby bylo vidět rozvržení bez layout shiftu. Nezávisí
+ * na tom, zda je propojený AdSense účet (viz app/config/analytics.ts).
  */
 export default function AdSlot({
   placement,
