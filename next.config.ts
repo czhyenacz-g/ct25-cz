@@ -8,6 +8,12 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  images: {
+    // Šablony pro /ai-fotka žijí v existující Knihovně médií projektu
+    // sokujici-redakce (Media Library) — žádná lokální kopie, viz
+    // app/lib/ai-photo-templates.ts.
+    remotePatterns: [{ protocol: "https", hostname: "redakce.sokujiciodhaleni.cz" }],
+  },
   async headers() {
     return [
       {
