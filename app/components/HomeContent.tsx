@@ -73,6 +73,9 @@ export default function HomeContent({ highlightSlug }: { highlightSlug?: string 
           <p className="mx-auto mt-6 max-w-2xl text-xl font-bold text-warn sm:text-2xl">
             ČT25 manipuluje. Ověřujte, než budete sdílet.
           </p>
+          <p className="mx-auto mt-2 max-w-2xl text-sm text-gray-400 sm:text-base">
+            Neplatí to jen pro ČT25. Ověřovat můžete jakékoli podezřelé tvrzení.
+          </p>
           <div className="mx-auto mt-6 max-w-2xl rounded-lg border border-warn/40 bg-warn/10 p-4 text-sm text-gray-200 sm:text-base">
             <strong className="text-white">CT25.cz není spojen s Českou televizí ani s provozovateli
             facebookové stránky „{CT25_PAGE_NAME}“.</strong> Tento web před jejími doloženými
