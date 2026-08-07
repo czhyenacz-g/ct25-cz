@@ -18,7 +18,7 @@ export default function PrivacyPage() {
           Tento text je provozním návrhem popisujícím skutečně nasazené technologie k datu poslední
           aktualizace výše. Nejde o garantovaně právně kompletní dokument – před plným komerčním
           spuštěním jej doporučujeme nechat zkontrolovat podle skutečného provozovatele a případných
-          nově nasazených nástrojů (viz <a href="/kontakt" className="text-accent underline">kontakt</a>).
+          nově nasazených nástrojů (viz <a href="/o-projektu#kontakt" className="text-accent underline">kontakt</a>).
         </p>
 
         <h2 className="text-xl font-semibold text-white">Co web nedělá</h2>
@@ -60,7 +60,7 @@ export default function PrivacyPage() {
         <p>
           Svou volbu ohledně cookies můžete kdykoli změnit přes odkaz „Nastavení cookies“ v patičce
           webu. S dotazy k ochraně soukromí se můžete obrátit na{" "}
-          <a href="/kontakt" className="text-accent underline">
+          <a href="/o-projektu#kontakt" className="text-accent underline">
             kontakt
           </a>
           .

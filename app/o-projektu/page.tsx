@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { CT25_PAGE_NAME, LAST_CONTENT_UPDATE, RELATED_SITE_NAME, RELATED_SITE_URL, SITE_NAME } from "../config/site";
+import { SUPPORTER_CONTACT_NAME, SUPPORTER_CONTACT_EMAIL } from "../lib/supporter-mailto";
+import ObfuscatedEmail from "../components/ObfuscatedEmail";
 
 export const metadata: Metadata = {
   title: "O projektu",
@@ -55,7 +57,7 @@ export default function AboutPage() {
           Jde o první, jednoduchou verzi webu bez registrace uživatelů a bez redakčního systému.
           Obsah je udržován přímo v kódu webu a bude postupně rozšiřován o další doložené případy.
           Informace o provozovateli budou doplněny před plným komerčním spuštěním webu – viz{" "}
-          <a href="/kontakt" className="text-accent underline">
+          <a href="#kontakt" className="text-accent underline">
             kontakt
           </a>
           .
@@ -69,6 +71,23 @@ export default function AboutPage() {
             {RELATED_SITE_NAME}
           </a>
           .
+        </p>
+
+        <h2 id="kontakt" className="scroll-mt-24 text-xl font-semibold text-white">
+          Kontakt
+        </h2>
+        <p>
+          Pokud máte k obsahu {SITE_NAME} opravu, reakci třetí strany nebo žádost o aktualizaci
+          konkrétní informace, napište nám. Každý podnět, který se opírá o věcné argumenty nebo
+          zdroj, posoudíme a v odůvodněných případech obsah upravíme.
+        </p>
+        <p>
+          {SUPPORTER_CONTACT_NAME}
+          <br />
+          <ObfuscatedEmail
+            user={SUPPORTER_CONTACT_EMAIL.split("@")[0]}
+            domain={SUPPORTER_CONTACT_EMAIL.split("@")[1]}
+          />
         </p>
       </div>
     </div>

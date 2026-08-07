@@ -17,7 +17,7 @@ export default function LegalNoticePage() {
         <p className="rounded-md border border-line bg-surface p-4 text-sm text-gray-400">
           Tento text je provozním návrhem odpovídajícím rozsahu první verze webu. Nejde o prohlášení
           o úplném souladu se všemi právními předpisy – doporučujeme kontrolu právníkem před plným
-          komerčním provozem (viz <a href="/kontakt" className="text-accent underline">kontakt</a>).
+          komerčním provozem (viz <a href="/o-projektu#kontakt" className="text-accent underline">kontakt</a>).
         </p>
 
         <h2 className="text-xl font-semibold text-white">Vztah k třetím stranám</h2>
@@ -47,7 +47,7 @@ export default function LegalNoticePage() {
         <p>
           Postup pro zaslání opravy, reakce nebo žádosti o aktualizaci obsahu bude plně funkční, jakmile
           bude doplněn kontaktní e-mail – aktuální stav najdete na stránce{" "}
-          <a href="/kontakt" className="text-accent underline">
+          <a href="/o-projektu#kontakt" className="text-accent underline">
             kontakt
           </a>
           .

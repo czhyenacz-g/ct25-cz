@@ -8,6 +8,19 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      // /kontakt zrušen jako samostatná stránka — obsah přesunut na konec
+      // /o-projektu (sekce #kontakt). Hash fragmenty (#kontakt) se
+      // neposílají na server, takže je Next.js redirects() nemůže cílit —
+      // proto trvalý redirect jen na /o-projektu bez kotvy.
+      {
+        source: "/kontakt",
+        destination: "/o-projektu",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     // Šablony pro /ai-fotka žijí v existující Knihovně médií projektu
     // sokujici-redakce (Media Library) — žádná lokální kopie, viz

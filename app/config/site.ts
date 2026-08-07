@@ -15,8 +15,10 @@ export const RELATED_SITE_URL = "https://sokujiciodhaleni.cz";
 // Datum poslední redakční aktualizace obsahu homepage a případů.
 export const LAST_CONTENT_UPDATE = "2026-08-06";
 
-// Veřejný kontaktní e-mail. Pokud není v produkci nastaven, stránka
-// /kontakt nezobrazí žádnou (ani placeholder) adresu — viz docs/LEGAL-TODO.md.
+// Veřejný kontaktní e-mail pro podněty (app/poslat-podnet). Pokud není
+// v produkci nastaven, stránka žádnou (ani placeholder) adresu nezobrazí
+// — viz docs/LEGAL-TODO.md. Samostatná stránka /kontakt byla zrušena,
+// obsah je teď na /o-projektu#kontakt (permanentní redirect v next.config.ts).
 export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "";
 
 // Rozdělené na dvě části pro ObfuscatedEmail — kvůli ochraně před
@@ -31,7 +33,7 @@ export const NAV_LINKS = [
   { href: "/#jak-poznat", label: "Jak poznat manipulaci" },
   { href: "/poslat-podnet", label: "Poslat podnět" },
   { href: "/o-projektu", label: "O projektu" },
-  { href: "/kontakt", label: "Kontakt" },
+  { href: "/fact-checker", label: "Fact-checker" },
 ] as const;
 
 export const FOOTER_LEGAL_LINKS = [
@@ -41,5 +43,5 @@ export const FOOTER_LEGAL_LINKS = [
   { href: "/pravni-upozorneni", label: "Právní upozornění" },
   { href: "/ochrana-soukromi", label: "Ochrana soukromí" },
   { href: "/cookies", label: "Cookies" },
-  { href: "/kontakt", label: "Kontakt" },
+  { href: "/o-projektu#kontakt", label: "Kontakt" },
 ] as const;

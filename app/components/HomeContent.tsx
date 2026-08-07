@@ -43,7 +43,9 @@ const verificationSteps = [
   },
   {
     title: "Použijte fact-checking",
-    description: "Podívejte se, zda tvrzení už neprověřil Demagog.cz nebo jiná nezávislá ověřovací organizace.",
+    description:
+      "Prověřte tvrzení pomocí našeho rychlého fact-checkeru a porovnejte více dostupných zdrojů. Existují i nezávislé fact-checkingové organizace jako Demagog.cz.",
+    href: "/fact-checker",
   },
 ];
 
@@ -157,17 +159,39 @@ export default function HomeContent({ highlightSlug }: { highlightSlug?: string 
       <section className="mx-auto max-w-4xl px-4 py-10">
         <h2 className="text-2xl font-bold text-white">Jak postupovat před sdílením</h2>
         <ol className="mt-6 space-y-4">
-          {verificationSteps.map((step, index) => (
-            <li key={step.title} className="flex gap-4 rounded-lg border border-line bg-surface p-4">
+          {verificationSteps.map((step, index) => {
+            const badge = (
               <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-ink">
                 {index + 1}
               </span>
+            );
+            const body = (
               <div>
                 <p className="font-semibold text-white">{step.title}</p>
                 <p className="mt-1 text-sm text-gray-400">{step.description}</p>
+                {step.href && <p className="mt-2 text-sm font-semibold text-accent">Vyzkoušet fact-checker →</p>}
               </div>
-            </li>
-          ))}
+            );
+
+            return (
+              <li key={step.title}>
+                {step.href ? (
+                  <Link
+                    href={step.href}
+                    className="flex gap-4 rounded-lg border border-line bg-surface p-4 transition-colors hover:border-accent/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+                  >
+                    {badge}
+                    {body}
+                  </Link>
+                ) : (
+                  <div className="flex gap-4 rounded-lg border border-line bg-surface p-4">
+                    {badge}
+                    {body}
+                  </div>
+                )}
+              </li>
+            );
+          })}
         </ol>
       </section>
 

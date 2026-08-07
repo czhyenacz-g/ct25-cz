@@ -27,9 +27,12 @@ describe("/fact-checker v sitemap", () => {
   });
 });
 
-describe("/fact-checker zatím není odkázaná z navigace ani footeru", () => {
-  it("není v hlavním menu", () => {
-    expect(NAV_LINKS.some((link) => link.href.includes("fact-checker"))).toBe(false);
+// Task "Sloučení kontaktu a zapojení Fact-checkeru" zapojil /fact-checker
+// do hlavního menu (viz tests/kontakt-merge.test.ts) — nahrazuje dřívější
+// "zatím není odkázaná" stav z prvního nasazení stránky.
+describe("/fact-checker je zapojená do hlavního menu, ne do patičky", () => {
+  it("je v hlavním menu", () => {
+    expect(NAV_LINKS.some((link) => link.href.includes("fact-checker"))).toBe(true);
   });
 
   it("není v patičce", () => {

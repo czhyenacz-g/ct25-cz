@@ -42,7 +42,7 @@ export default function ReportTipPage() {
         <p className="mt-3 rounded-md border border-dashed border-line bg-surface p-4 text-sm text-gray-400">
           Vývojový placeholder: proměnná <code>NEXT_PUBLIC_CONTACT_EMAIL</code> není nastavena. Na
           produkci se v tomto stavu nezobrazí žádný e-mail – podívejte se na stránku{" "}
-          <Link href="/kontakt" className="text-accent underline">
+          <Link href="/o-projektu#kontakt" className="text-accent underline">
             kontakt
           </Link>{" "}
           pro aktuální stav.
@@ -51,7 +51,7 @@ export default function ReportTipPage() {
         <p className="mt-3 rounded-md border border-line bg-surface p-4 text-sm text-gray-400">
           Funkční kontaktní e-mail pro podněty bude na této stránce doplněn v nejbližší době. Aktuální
           stav kontaktu najdete na stránce{" "}
-          <Link href="/kontakt" className="text-accent underline">
+          <Link href="/o-projektu#kontakt" className="text-accent underline">
             kontakt
           </Link>
           .
