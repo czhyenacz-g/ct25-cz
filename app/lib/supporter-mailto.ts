@@ -1,5 +1,9 @@
+import { CONTACT_EMAIL } from "../config/site";
+
 export const SUPPORTER_CONTACT_NAME = "Hynek Dařbujan";
-export const SUPPORTER_CONTACT_EMAIL = "hynek@darbujan.com";
+// Nikdy osobní e-mail natvrdo v kódu — sdílená redakční adresa, stejný
+// zdroj pravdy jako zbytek webu (viz app/config/site.ts, docs/LEGAL-TODO.md).
+export const SUPPORTER_CONTACT_EMAIL = CONTACT_EMAIL;
 export const SUPPORTER_EMAIL_SUBJECT = "Zájem o AI fotomontáž z ct25.cz";
 
 /**
