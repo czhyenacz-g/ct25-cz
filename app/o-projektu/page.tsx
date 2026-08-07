@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { CT25_PAGE_NAME, LAST_CONTENT_UPDATE, RELATED_SITE_NAME, RELATED_SITE_URL, SITE_NAME } from "../config/site";
-import { SUPPORTER_CONTACT_NAME, SUPPORTER_CONTACT_EMAIL } from "../lib/supporter-mailto";
+import { SUPPORTER_CONTACT_EMAIL } from "../lib/supporter-mailto";
 import ObfuscatedEmail from "../components/ObfuscatedEmail";
 
 export const metadata: Metadata = {
@@ -82,8 +82,6 @@ export default function AboutPage() {
           zdroj, posoudíme a v odůvodněných případech obsah upravíme.
         </p>
         <p>
-          {SUPPORTER_CONTACT_NAME}
-          <br />
           <ObfuscatedEmail
             user={SUPPORTER_CONTACT_EMAIL.split("@")[0]}
             domain={SUPPORTER_CONTACT_EMAIL.split("@")[1]}

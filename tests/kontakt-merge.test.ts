@@ -27,9 +27,9 @@ describe("/o-projektu obsahuje kontaktní sekci", () => {
     expect(source).toMatch(/id="kontakt"/);
   });
 
-  it("obsahuje jméno a e-mail kontaktu", () => {
-    expect(source).toMatch(/SUPPORTER_CONTACT_NAME/);
+  it("obsahuje kontaktní e-mail, bez osobního jména provozovatele", () => {
     expect(source).toMatch(/SUPPORTER_CONTACT_EMAIL/);
+    expect(source).not.toMatch(/SUPPORTER_CONTACT_NAME/);
   });
 });
 

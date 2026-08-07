@@ -1,5 +1,5 @@
 import { photoTemplates, TemplateId } from "../../lib/ai-photo-templates";
-import { buildSupporterMailtoHref, SUPPORTER_CONTACT_EMAIL, SUPPORTER_CONTACT_NAME } from "../../lib/supporter-mailto";
+import { buildSupporterMailtoHref, SUPPORTER_CONTACT_EMAIL } from "../../lib/supporter-mailto";
 
 /**
  * Dobrovolná podpora — žádný veřejný formulář, žádný upload, žádná platba.
@@ -24,7 +24,7 @@ export default function SupporterSection({ selectedTemplate }: { selectedTemplat
         e-mailem.
       </p>
       <p className="mt-3 text-sm text-gray-400">
-        Kontakt: {SUPPORTER_CONTACT_NAME} ·{" "}
+        Kontakt:{" "}
         <a href={`mailto:${SUPPORTER_CONTACT_EMAIL}`} className="text-accent underline hover:brightness-110">
           {SUPPORTER_CONTACT_EMAIL}
         </a>
