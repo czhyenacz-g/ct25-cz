@@ -105,7 +105,7 @@ export const documentedCases: DocumentedCase[] = [
     slug: "cincila-nehoda-zavadejici-tvrzeni",
     title: "Zavádějící grafika o nehodě, kterou způsobil cyklista",
     summary:
-      "Stránka „ČT25 – Pravda bez cenzury“ zveřejnila grafiku s tvrzením, že Benjamin Činčila v roce 2021 zabil cyklistu „pod vlivem amfetaminu a alkoholu“, a stavěla to do kontrastu s kritikou jiného politika po jiné nehodě. Podle Demagog.cz laboratorní rozbor krve přítomnost alkoholu ani drog u Činčily nepotvrdil a policie uzavřela vyšetřování se závěrem, že nehodu zavinil výhradně cyklista. Činčila navíc v době nehody nezastával žádnou volenou ani jmenovanou funkci. Příspěvek byl v rámci spolupráce se společností Meta označen jako nepravdivý.",
+      "Stránka „ČT25 – Pravda bez cenzury“ zveřejnila grafiku s tvrzením, že pan Benjamin Činčila v roce 2021 zabil cyklistu „pod vlivem amfetaminu a alkoholu“, a stavěla to do kontrastu s kritikou jiného politika po jiné nehodě. Podle Demagog.cz laboratorní rozbor krve přítomnost alkoholu ani drog u pana Činčily nepotvrdil a policie uzavřela vyšetřování se závěrem, že nehodu zavinil výhradně cyklista. Pan Činčila navíc v době nehody nezastával žádnou volenou ani jmenovanou funkci. Příspěvek byl v rámci spolupráce se společností Meta označen jako nepravdivý.",
     manipulationType: "Zavádějící tvrzení",
     verifiedDate: "2026-07-23",
     sources: [
