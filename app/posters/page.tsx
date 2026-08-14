@@ -56,9 +56,8 @@ export default async function PostersPage() {
         </p>
       </div>
 
-      <div className="mt-6 max-w-3xl rounded-lg border border-warn/40 bg-warn/10 p-4 text-sm text-gray-200">
-        Některé materiály obsahují ukázky dezinformací, fotomontáží nebo parodického obsahu. Jejich
-        účelem je kritika, vzdělávání a upozornění na informační manipulace.
+      <div className="py-4">
+        <AffiliateRecommendation />
       </div>
 
       <PosterGallerySection
@@ -80,6 +79,11 @@ export default async function PostersPage() {
         itemAltFallback="Plakát CT25.cz ke stažení"
         emptyMessage="Zatím tu nejsou žádné plakáty ke stažení. Brzy je doplníme."
       />
+
+      <div className="mt-10 max-w-3xl rounded-lg border border-warn/40 bg-warn/10 p-4 text-sm text-gray-200">
+        Některé materiály obsahují ukázky dezinformací, fotomontáží nebo parodického obsahu. Jejich
+        účelem je kritika, vzdělávání a upozornění na informační manipulace.
+      </div>
     </div>
   );
 }
