@@ -25,6 +25,16 @@ export default function FactCheckerPage() {
         kontrola, která vám pomůže hledat další zdroje.
       </div>
 
+      <p className="mt-4 text-sm text-gray-400">
+        Potřebujete ověřit, zda obrázek mohl vzniknout pomocí AI?{" "}
+        <a
+          href="https://jetoai.cz/"
+          className="font-medium text-gray-300 underline hover:text-accent"
+        >
+          → JeToAI.cz
+        </a>
+      </p>
+
       <div className="mt-8">
         <FactCheckerForm />
       </div>
