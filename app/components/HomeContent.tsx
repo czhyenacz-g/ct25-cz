@@ -1,11 +1,13 @@
 import Link from "next/link";
 import AdSlot from "./ads/AdSlot";
+import AffiliateBanner from "./ads/AffiliateBanner";
 import CaseCard from "./CaseCard";
 import ScrollToCase from "./ScrollToCase";
 import PostersBanner from "./posters/PostersBanner";
 import { documentedCases } from "../lib/cases";
 import { CT25_PAGE_NAME, RELATED_SITE_NAME, RELATED_SITE_URL } from "../config/site";
 import { HOMEPAGE_BANNER_IMAGE_FILENAME } from "../config/posters";
+import { ALPHEGA_BANNER } from "../config/ads";
 import { getPosterByName } from "../lib/posters";
 
 const spottingTips = [
@@ -114,6 +116,8 @@ export default async function HomeContent({ highlightSlug }: { highlightSlug?: s
           ))}
         </div>
       </section>
+
+      <AffiliateBanner {...ALPHEGA_BANNER} />
 
       <div className="mx-auto max-w-5xl px-4 py-6">
         <AdSlot placement="after-hero" format="leaderboard" />
