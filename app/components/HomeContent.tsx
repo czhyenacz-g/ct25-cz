@@ -78,7 +78,9 @@ export default async function HomeContent({ highlightSlug }: { highlightSlug?: s
             tvrzení a AI obsahu, který lze zaměnit za skutečnost.
           </p>
           <p className="mx-auto mt-6 max-w-2xl text-xl font-bold text-warn sm:text-2xl">
-            ČT25 manipuluje. Ověřujte, než budete sdílet.
+            <Link href="/fact-checker" className="underline decoration-warn/50 hover:decoration-warn">
+              ČT25 manipuluje. Ověřujte, než budete sdílet.
+            </Link>
           </p>
           <p className="mx-auto mt-2 max-w-2xl text-sm text-gray-400 sm:text-base">
             Neplatí to jen pro ČT25. Ověřovat můžete jakékoli podezřelé tvrzení.
