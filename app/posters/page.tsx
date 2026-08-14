@@ -3,6 +3,7 @@ import { SITE_URL } from "../config/site";
 import { STICKERS_COLLECTION_SLUG, POSTERS_COLLECTION_SLUG } from "../config/posters";
 import { getPosterCollection } from "../lib/posters";
 import PosterGallerySection from "../components/posters/PosterGallerySection";
+import AffiliateRecommendation from "../components/posters/AffiliateRecommendation";
 
 export const metadata: Metadata = {
   title: "Plakáty a nálepky proti dezinformacím ke stažení",
@@ -67,6 +68,10 @@ export default async function PostersPage() {
         itemAltFallback="Nálepka CT25.cz ke stažení"
         emptyMessage="Zatím tu nejsou žádné nálepky ke stažení. Brzy je doplníme."
       />
+
+      <div className="py-4">
+        <AffiliateRecommendation />
+      </div>
 
       <PosterGallerySection
         id="plakaty"
