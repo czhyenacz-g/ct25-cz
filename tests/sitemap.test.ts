@@ -21,6 +21,10 @@ describe("sitemap", () => {
     expect(new Set(urls).size).toBe(urls.length);
   });
 
+  it("obsahuje stránku s plakáty a nálepkami", () => {
+    expect(urls).toContain(`${SITE_URL}/posters`);
+  });
+
   it("URL případů mají lastModified odvozené ze skutečného verifiedDate, ne vymyšlené", () => {
     for (const item of documentedCases) {
       const entry = entries.find((e) => e.url === `${SITE_URL}/clanky/${item.slug}`);

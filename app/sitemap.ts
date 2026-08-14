@@ -7,6 +7,7 @@ const routes = [
   "/o-projektu",
   "/poslat-podnet",
   "/fact-checker",
+  "/posters",
   "/ochrana-soukromi",
   "/cookies",
   "/pravni-upozorneni",

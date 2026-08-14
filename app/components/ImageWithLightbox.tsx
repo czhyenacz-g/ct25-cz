@@ -9,12 +9,22 @@ export default function ImageWithLightbox({
   caption,
   width,
   height,
+  className = "mb-4",
+  downloadUrl,
+  downloadLabel = "Stáhnout pro tisk",
+  dimensionsLabel,
 }: {
   src: string;
   alt: string;
   caption?: string;
   width: number;
   height: number;
+  className?: string;
+  /** Když je zadané, zobrazí se odkaz ke stažení originálu u náhledu i ve fullscreenu. */
+  downloadUrl?: string;
+  downloadLabel?: string;
+  /** Volitelný diskrétní údaj o rozměrech souboru (např. "2480 × 3508 px"). */
+  dimensionsLabel?: string;
 }) {
   const [open, setOpen] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -39,7 +49,7 @@ export default function ImageWithLightbox({
   }, [open]);
 
   return (
-    <figure className="mb-4">
+    <figure className={className}>
       <button
         ref={triggerRef}
         type="button"
@@ -59,6 +69,21 @@ export default function ImageWithLightbox({
         </span>
       </button>
       {caption && <figcaption className="mt-1 text-xs text-gray-500">{caption}</figcaption>}
+
+      {downloadUrl && (
+        <div className="mt-2 flex items-center justify-between gap-2 text-xs">
+          <a
+            href={downloadUrl}
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-accent hover:underline"
+          >
+            {downloadLabel}
+          </a>
+          {dimensionsLabel && <span className="text-gray-500">{dimensionsLabel}</span>}
+        </div>
+      )}
 
       {open && (
         <div
@@ -85,6 +110,23 @@ export default function ImageWithLightbox({
             className="max-h-full max-w-full object-contain"
             onClick={(event) => event.stopPropagation()}
           />
+          {downloadUrl && (
+            <div
+              className="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-3 rounded-full bg-black/70 px-4 py-2 text-xs text-gray-200"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <a
+                href={downloadUrl}
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-accent hover:underline"
+              >
+                {downloadLabel}
+              </a>
+              {dimensionsLabel && <span>{dimensionsLabel}</span>}
+            </div>
+          )}
         </div>
       )}
     </figure>

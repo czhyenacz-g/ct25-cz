@@ -2,8 +2,11 @@ import Link from "next/link";
 import AdSlot from "./ads/AdSlot";
 import CaseCard from "./CaseCard";
 import ScrollToCase from "./ScrollToCase";
+import PostersBanner from "./posters/PostersBanner";
 import { documentedCases } from "../lib/cases";
 import { CT25_PAGE_NAME, RELATED_SITE_NAME, RELATED_SITE_URL } from "../config/site";
+import { HOMEPAGE_BANNER_IMAGE_FILENAME } from "../config/posters";
+import { getPosterByName } from "../lib/posters";
 
 const spottingTips = [
   {
@@ -55,7 +58,9 @@ const verificationSteps = [
  * záměrně: Next.js generuje striktní PageProps typ pro exportovaný default
  * z page.tsx a nedovolí mu přijímat vlastní `highlightSlug` prop.
  */
-export default function HomeContent({ highlightSlug }: { highlightSlug?: string } = {}) {
+export default async function HomeContent({ highlightSlug }: { highlightSlug?: string } = {}) {
+  const bannerImage = await getPosterByName(HOMEPAGE_BANNER_IMAGE_FILENAME);
+
   return (
     <>
       <ScrollToCase slug={highlightSlug} />
@@ -91,6 +96,8 @@ export default function HomeContent({ highlightSlug }: { highlightSlug?: string 
           </a>
         </div>
       </section>
+
+      <PostersBanner image={bannerImage} />
 
       <section id="pripady" className="mx-auto max-w-5xl px-4 py-10">
         <h2 className="text-2xl font-bold text-white">Doložené případy manipulace</h2>
