@@ -103,6 +103,8 @@ export default async function HomeContent({ highlightSlug }: { highlightSlug?: s
 
       <PostersBanner image={bannerImage} />
 
+      <AffiliateBanner {...ALPHEGA_BANNER} />
+
       <section id="pripady" className="mx-auto max-w-5xl px-4 py-10">
         <h2 className="text-2xl font-bold text-white">Doložené případy manipulace</h2>
         <p className="mt-2 max-w-2xl text-gray-400">
@@ -258,6 +260,8 @@ export default async function HomeContent({ highlightSlug }: { highlightSlug?: s
       <div className="mx-auto max-w-5xl px-4 py-8">
         <AdSlot placement="before-footer" format="leaderboard" />
       </div>
+
+      <AffiliateBanner {...ALPHEGA_BANNER} />
     </>
   );
 }
