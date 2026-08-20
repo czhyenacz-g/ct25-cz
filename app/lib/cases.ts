@@ -27,9 +27,12 @@ export interface DocumentedCase {
 
 /**
  * Pouze případy, ke kterým existuje dohledatelný fact-check nezávislého
- * ověřovatele (primárně Demagog.cz) a který konkrétní příspěvek/fotografii
- * přímo přiřazuje stránce „ČT25 – Pravda bez cenzury“. Nové případy přidávej
- * stejnou strukturou — bez zdroje položku nepřidávej (viz README.md).
+ * ověřovatele (primárně Demagog.cz, u kanálů/webů napodobujících Českou
+ * televizi mimo Facebook i investigace.cz) a který konkrétní
+ * příspěvek/fotografii/video přímo přiřazuje sledované stránce/kanálu
+ * (primárně „ČT25 – Pravda bez cenzury“, doplňkově i dalším prokazatelně
+ * manipulativním účtům se zavádějícím názvem, např. „neČT24“). Nové případy
+ * přidávej stejnou strukturou — bez zdroje položku nepřidávej (viz README.md).
  */
 export const documentedCases: DocumentedCase[] = [
   {
@@ -113,6 +116,21 @@ export const documentedCases: DocumentedCase[] = [
         label: "Příspěvek překrucuje autonehodu lidoveckého poslance. Drogy ani alkohol se nepotvrdily.",
         publisher: "Demagog.cz",
         url: "https://demagog.cz/diskuze/prispevek-prekrucuje-autonehodu-lidoveckeho-poslance-drogy-ani-alkohol-se-nepotvrdily",
+      },
+    ],
+  },
+  {
+    slug: "nect24-video-petr-pavel-konfrontace",
+    title: "Účelově sestříhané video Petra Pavla o „konfrontaci s Ruskem“ (neČT24)",
+    summary:
+      "Telegramový kanál a web „neČT24“ (neCT24.cz) — anonymně provozovaný účet, který svým názvem jen napodobuje zpravodajský kanál ČT24 a s Českou televizí nemá nic společného — sdílel účelově sestříhané video prezidentského kandidáta Petra Pavla. Video budilo dojem, že Pavel vyzývá k přímé vojenské konfrontaci s Ruskem. Podle investigace.cz šlo o manipulativní střih; video bylo z kanálu později smazáno. Stejný účet zveřejnil i obdobně sestříhané video generála Karla Řehky, které budilo dojem, že mluví o finančním prospěchu ČR z války na Ukrajině.",
+    manipulationType: "Účelově sestříhané video",
+    verifiedDate: "2024-10-03",
+    sources: [
+      {
+        label: "Průvodce českým a slovenským Telegramem: Díl II. aneb volá Moskva",
+        publisher: "investigace.cz",
+        url: "https://www.investigace.cz/pruvodce-ceskym-a-slovenskym-telegramem-dil-ii-aneb-vola-moskva/",
       },
     ],
   },

@@ -17,7 +17,11 @@ export default function EditorialRulesPage() {
         <p>{SITE_NAME} se při zařazování a popisu případů řídí těmito pravidly:</p>
         <ul className="list-disc space-y-2 pl-5">
           <li>Každý uvedený případ musí mít odkaz na veřejně dostupný fact-check nezávislého ověřovatele.</li>
-          <li>Preferujeme primární fact-checkingové zdroje, zejména Demagog.cz.</li>
+          <li>
+            Preferujeme primární fact-checkingové zdroje, zejména Demagog.cz. U témat mimo jeho běžný
+            záběr (např. dezinformační kanály mimo Facebook) uznáváme i další kvalitní nezávislé
+            investigativní zdroje, např. investigace.cz.
+          </li>
           <li>Nepoužíváme jako zdroj anonymní komentáře, neprověřené účty ani nekvalitní agregátory.</li>
           <li>Shrnutí případů píšeme vlastními slovy; nepřebíráme rozsáhle cizí text ani chráněné obrázky.</li>
           <li>

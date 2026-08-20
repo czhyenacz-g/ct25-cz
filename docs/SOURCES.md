@@ -69,6 +69,25 @@ webu (ne datum vydání fact-checku, to je ve sloupci "Vydáno").
   jako nepravdivý.
 - **Poznámka k důvěryhodnosti:** Primární fact-check.
 
+## Účelově sestříhané video: Petr Pavel a „konfrontace s Ruskem“ (neČT24)
+
+- **Zdroj:** investigace.cz
+- **URL:** https://www.investigace.cz/pruvodce-ceskym-a-slovenskym-telegramem-dil-ii-aneb-vola-moskva/
+- **Vydavatel:** investigace.cz
+- **Vydáno:** 2024-10-03 (aktualizováno 2024-10-14)
+- **Datum kontroly:** 2026-08-20
+- **Co dokládá:** Telegramový kanál a web „neČT24“ (neCT24.cz), anonymně
+  provozovaný účet napodobující svým názvem ČT24, sdílel účelově sestříhané
+  video Petra Pavla budící dojem, že vyzývá k přímé vojenské konfrontaci s
+  Ruskem. Video bylo později smazáno. Stejný účet zveřejnil i obdobně
+  sestříhané video generála Karla Řehky o údajném finančním prospěchu ČR z
+  války na Ukrajině.
+- **Poznámka k důvěryhodnosti:** Primární investigativní zdroj (ne úzce
+  fact-checkingová organizace jako Demagog.cz, ale srovnatelně nezávislé a
+  ověřitelné investigativní médium). Článek explicitně neguje/nepotvrzuje
+  spekulaci o přímém provozování ruskou agenturou Sputnik — tahle spekulace
+  proto není součástí tvrzení na webu CT25.cz.
+
 ---
 
 Při přidání nového případu doplň nový oddíl se stejnou strukturou

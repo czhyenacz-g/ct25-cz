@@ -72,25 +72,28 @@ export default async function HomeContent({ highlightSlug }: { highlightSlug?: s
             Informační varování
           </p>
           <h1 className="text-2xl font-extrabold uppercase leading-tight tracking-tight text-white sm:text-4xl">
-            Pozor: facebooková stránka ČT25 šíří prokazatelně nepravdivý a manipulativní obsah
+            Pozor: facebooková stránka „ČT25“ i kanál „neČT24“ šíří prokazatelně nepravdivý a
+            manipulativní obsah
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-gray-300 sm:text-lg">
             Označení „ČT25“ používá na sociálních sítích stránka „{CT25_PAGE_NAME}“ – nejde o Českou
-            televizi. Nezávislí fact-checkeři u ní doložili opakované šíření fotomontáží, nepravdivých
-            tvrzení a AI obsahu, který lze zaměnit za skutečnost.
+            televizi. Podobně kanál „neČT24“ (Telegram a web neCT24.cz) jen napodobuje název ČT24 a s
+            Českou televizí nemá nic společného. Nezávislí ověřovatelé (Demagog.cz, investigace.cz) u
+            obou doložili opakované šíření zmanipulovaného obsahu – fotomontáží, upravených videí a
+            nepravdivých tvrzení.
           </p>
           <p className="mx-auto mt-6 max-w-2xl text-xl font-bold text-warn sm:text-2xl">
             <Link href="/fact-checker" className="underline decoration-warn/50 hover:decoration-warn">
-              ČT25 manipuluje. Ověřujte, než budete sdílet.
+              ČT25 i neČT24 manipulují. Ověřujte, než budete sdílet.
             </Link>
           </p>
           <p className="mx-auto mt-2 max-w-2xl text-sm text-gray-400 sm:text-base">
-            Neplatí to jen pro ČT25. Ověřovat můžete jakékoli podezřelé tvrzení.
+            Neplatí to jen pro ně. Ověřovat můžete jakékoli podezřelé tvrzení.
           </p>
           <div className="mx-auto mt-6 max-w-2xl rounded-lg border border-warn/40 bg-warn/10 p-4 text-sm text-gray-200 sm:text-base">
             <strong className="text-white">CT25.cz není spojen s Českou televizí ani s provozovateli
-            facebookové stránky „{CT25_PAGE_NAME}“.</strong> Tento web před jejími doloženými
-            manipulacemi varuje.
+            facebookové stránky „{CT25_PAGE_NAME}“ nebo kanálu „neČT24“.</strong> Tento web před jejich
+            doloženými manipulacemi varuje.
           </div>
           <a
             href="#pripady"
