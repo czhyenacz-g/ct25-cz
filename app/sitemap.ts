@@ -12,6 +12,7 @@ const routes = [
   "/cookies",
   "/pravni-upozorneni",
   "/redakcni-pravidla",
+  "/zdroje",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

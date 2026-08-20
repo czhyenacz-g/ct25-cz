@@ -40,6 +40,7 @@ export const FOOTER_LEGAL_LINKS = [
   { href: "/o-projektu", label: "O projektu" },
   { href: "/poslat-podnet", label: "Poslat podnět" },
   { href: "/redakcni-pravidla", label: "Redakční pravidla" },
+  { href: "/zdroje", label: "Zdroje a partnerské weby" },
   { href: "/pravni-upozorneni", label: "Právní upozornění" },
   { href: "/ochrana-soukromi", label: "Ochrana soukromí" },
   { href: "/cookies", label: "Cookies" },
