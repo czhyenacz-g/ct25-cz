@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FOOTER_LEGAL_LINKS, LAST_CONTENT_UPDATE, SITE_NAME } from "../config/site";
+import { FOOTER_LEGAL_LINKS, LAST_CONTENT_UPDATE, SITE_FACEBOOK_URL, SITE_NAME } from "../config/site";
 import CookieSettingsButton from "./consent/CookieSettingsButton";
 
 export default function Footer() {
@@ -19,6 +19,16 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href={SITE_FACEBOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-white"
+              >
+                Facebook
+              </a>
+            </li>
             <li>
               <CookieSettingsButton />
             </li>

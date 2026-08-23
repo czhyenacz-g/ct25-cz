@@ -12,6 +12,11 @@ export const CT25_PAGE_NAME = "ČT25 – Pravda bez cenzury";
 export const RELATED_SITE_NAME = "ŠokujícíOdhalení.cz";
 export const RELATED_SITE_URL = "https://sokujiciodhaleni.cz";
 
+// Oficiální Facebook profil TOHOTO projektu (CT25.cz) — nezaměňovat s
+// facebookovou stránkou „ČT25 – Pravda bez cenzury“ (CT25_PAGE_NAME výše),
+// před kterou web varuje. Odkaz na ni nikam v UI nevede.
+export const SITE_FACEBOOK_URL = "https://www.facebook.com/ct25.cz";
+
 // Datum poslední redakční aktualizace obsahu homepage a případů.
 export const LAST_CONTENT_UPDATE = "2026-08-06";
 
