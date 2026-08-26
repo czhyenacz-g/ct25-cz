@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   // proto nepotřebuje consent gating stejně jako account script.
   other: {
     // Seznam Webmaster Tools — ověření vlastnictví domény.
-    "seznam-wmt": "yimpQhXNj17hrmzEuxugXCeRTDzQPyo5",
+    "seznam-wmt": "flzH2tnLh8g2iwhBfAAMxwdQYkyDdBe1",
     ...(ADSENSE_CLIENT_ID ? { "google-adsense-account": ADSENSE_CLIENT_ID } : {}),
   },
 };
