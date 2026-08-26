@@ -42,9 +42,11 @@ export const metadata: Metadata = {
   // když crawler nespustí JS/neudělí consent — bez tagu si AdSense
   // propojení účtu nemusí "všimnout". Nic netrackuje, nesetuje cookies,
   // proto nepotřebuje consent gating stejně jako account script.
-  ...(ADSENSE_CLIENT_ID
-    ? { other: { "google-adsense-account": ADSENSE_CLIENT_ID } }
-    : {}),
+  other: {
+    // Seznam Webmaster Tools — ověření vlastnictví domény.
+    "seznam-wmt": "yimpQhXNj17hrmzEuxugXCeRTDzQPyo5",
+    ...(ADSENSE_CLIENT_ID ? { "google-adsense-account": ADSENSE_CLIENT_ID } : {}),
+  },
 };
 
 export default function RootLayout({
