@@ -13,6 +13,7 @@ export default function ImageWithLightbox({
   downloadUrl,
   downloadLabel = "Stáhnout pro tisk",
   dimensionsLabel,
+  sizes = "(max-width: 640px) 100vw, 480px",
 }: {
   src: string;
   alt: string;
@@ -25,6 +26,8 @@ export default function ImageWithLightbox({
   downloadLabel?: string;
   /** Volitelný diskrétní údaj o rozměrech souboru (např. "2480 × 3508 px"). */
   dimensionsLabel?: string;
+  /** Výchozí hodnota odpovídá dosavadnímu chování (CaseCard) — voláno beze změny. PosterGrid předává přesnou hodnotu podle svého skutečného grid layoutu. */
+  sizes?: string;
 }) {
   const [open, setOpen] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -61,7 +64,7 @@ export default function ImageWithLightbox({
           alt={alt}
           width={width}
           height={height}
-          sizes="(max-width: 640px) 100vw, 480px"
+          sizes={sizes}
           className="h-auto w-full"
         />
         <span className="block bg-ink/80 px-3 py-1.5 text-xs text-gray-300 group-hover:text-white">
