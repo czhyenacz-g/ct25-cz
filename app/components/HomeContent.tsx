@@ -214,6 +214,34 @@ export default async function HomeContent({ highlightSlug }: { highlightSlug?: s
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10">
+        <div className="rounded-lg border border-accent/40 bg-accent/10 p-6 text-center sm:p-8">
+          <h2 className="text-xl font-bold text-white sm:text-2xl">Jděte volit</h2>
+          <p className="mx-auto mt-3 max-w-xl text-gray-300">
+            Bez ohledu na to, jaký obsah na sociálních sítích sledujete, nejúčinnější obranou proti
+            manipulaci je dojít k volbám a rozhodnout se na základě ověřených informací. Pokud si
+            nejste jistí, koho volit, může vám pomoct kalkulačka na{" "}
+            <a
+              href="https://nechcivolit.cz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-accent underline"
+            >
+              Nechcivolit.cz
+            </a>{" "}
+            – vyřadíte kandidáty a strany, které nechcete, a zjistíte, kdo vám zbývá.
+          </p>
+          <a
+            href="https://nechcivolit.cz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-block rounded-md bg-accent px-5 py-2.5 font-semibold text-ink hover:brightness-110"
+          >
+            Vyzkoušet kalkulačku na Nechcivolit.cz
+          </a>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-10">
         <div className="rounded-lg border border-warn/40 bg-warn/10 p-6 text-center sm:p-8">
           <h2 className="text-xl font-bold text-white sm:text-2xl">
             Narazili jste na podezřelý příspěvek ČT25?
